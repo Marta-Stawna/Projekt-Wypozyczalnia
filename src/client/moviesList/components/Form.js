@@ -1,12 +1,13 @@
-import {Component} from 'react';
-import {connect} from 'react-redux';
+import { Component } from 'react';
+import { connect } from 'react-redux';
 
-import {saveOrder} from '../actions/MoviesActions';
+import { saveOrder } from '../actions/MoviesActions';
 
-class Form extends Component{
-  constructor(props){
+class Form extends Component {
+
+  constructor(props) {
     super(props);
-    this.sendOrder=this.sendOrder.bind(this);
+    this.sendOrder = this.sendOrder.bind(this);
   }
   sendOrder(){
     let firstName=document.getElementById("firstName").value;
