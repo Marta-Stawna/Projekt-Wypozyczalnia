@@ -1,12 +1,11 @@
-import {ACTIONS} from './MoviesListReducer';
+import { ACTIONS } from './MoviesListReducer';
 
-function BasketReducer(state={list:[]},action){
+function BasketReducer(state = { list: [] }, action) {
   switch(action.type){
     case ACTIONS.ADD_BASKET:
-    console.log("Baskek" , state.list)
-      return{
-        ...state ,list:[...state.list,
-          {
+      return {
+        ...state, list:[...state.list,
+        {
           name:action.name,
           price:action.price,
           id:action.id,
@@ -14,8 +13,8 @@ function BasketReducer(state={list:[]},action){
         }]
       }
     case ACTIONS.REMOVE_FROM_BASKET:
-      return{
-        ...state,list:state.list.splice(0,action.id).concat(
+      return {
+        ...state, list:state.list.splice(0,action.id).concat(
        state.list.slice(action.id+1))
       }
     default:

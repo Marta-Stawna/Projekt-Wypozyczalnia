@@ -1,42 +1,44 @@
 @import 'main/fonts.css';
 @import 'main/reset.css';
 
-.nav{
+.nav {
   background-color: rgb(232, 232, 232);
   padding: 0 24px;
   line-height: 56px;
   font-size: 18px;
   font-family: Roboto, sans-serif;
-  color:grey;
+  color: grey;
 }
 
-.nav a{
+.nav a {
   color: rgba(0, 0, 0, 0.4);
   text-decoration: none;
-  margin:20px;
+  margin: 20px;
 }
 
-.nav a:hover{
-  color:grey;
+.nav a:hover {
+  color: grey;
   cursor: pointer;
 }
-h3{
-  color:grey !important;
+
+h3 {
+  color: grey !important;
 }
-.summary{
+
+.summary {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
 }
 
-.htable{
-    font-size: 18px;
-    padding:10px;
-    text-align: center;
-    color:grey;
+.htable {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  color: grey;
 }
 
-.btable{
-    font-size: 15px;
-    padding:15px !important;
-    text-align: center;
+.btable {
+  font-size: 15px;
+  padding: 15px !important;
+  text-align: center;
 }
