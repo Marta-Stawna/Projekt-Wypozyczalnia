@@ -1,24 +1,24 @@
 import { Link } from 'react-router';
-import {Component} from 'react';
+import { Component } from 'react';
 import Header from './components/Header';
 
 
-class App extends Component{
+class App extends Component {
 
-render(){
+  render(){
     return(
-<div>
-  <Header/>
-  <div className="nav">
-    <Link to='/about'>O nas</Link>{" "}
-    <Link to='/movies'>Lista</Link>{" "}
-    <Link to='/filter'>Wyszukaj</Link>{" "}
-    <Link to='/form'>Formularz</Link>{" "}
-  </div>
-    <div className="container">
-        {this.props.children}
-    </div>
-</div>
+      <div>
+        <Header/>
+        <div className="nav">
+          <Link to='/about'>O nas</Link>{" "}
+          <Link to='/movies'>Lista</Link>{" "}
+          <Link to='/filter'>Wyszukaj</Link>{" "}
+          <Link to='/form'>Formularz</Link>{" "}
+        </div>
+        <div className="container">
+          {this.props.children}
+        </div>
+      </div>
   )}
 }
 

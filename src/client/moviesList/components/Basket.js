@@ -2,12 +2,13 @@
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 
-import {addBasket, removeBasket,toggleAvailable} from '../actions/MoviesActionCreator';
+import { addBasket, removeBasket, toggleAvailable } from '../actions/MoviesActionCreator';
 
-function Basket() {
+class Basket extends Component {
+
+    render() {
     let suma = 0;
-
-    return (
+      return (
       <div>
         <table className="table table-condensed">
           <thead >
@@ -22,7 +23,11 @@ function Basket() {
             <tr key={index}>
               <td className='btable'>{item.name}</td>
               <td className='btable'>{item.price}</td>
-              <td className='btable'><button className="btn btn-danger" onClick={()=>(this.props.removeBasket(index),this.props.toggleAvailable(item.id))}>Usuń z koszyka</button></td>
+              <td className='btable'>
+                <button className="btn btn-danger" onClick={() => (this.props.removeBasket(index),this.props.toggleAvailable(item.id))}>
+                  Usuń z koszyka
+                </button>
+              </td>
             </tr>)) }
           </tbody>
         </table>
@@ -33,7 +38,7 @@ function Basket() {
               <div className="summary">
                 <div> Zamowianio: {this.props.basket.length} szt </div>
                 <div>{ this.props.basket.map(item => {
-                    { suma=suma+item.price }
+                    { suma = suma + item.price }
                 })} Cena : {suma} zł
                 </div>
                 </div>
@@ -43,9 +48,8 @@ function Basket() {
           <Link to='/form' className="btn btn-primary btn-lg btn-block">Zamow</Link>
         </div><hr/>
       </div>
-    );
+    )}
   }
-}
 
 export default connect(state => ({
   basket: state.BasketReducer.list,

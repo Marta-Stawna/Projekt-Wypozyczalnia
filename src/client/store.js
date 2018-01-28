@@ -5,7 +5,7 @@ import MoviesListReducer from './moviesList/reducers/MoviesListReducer';
 import FilterReducer from './moviesList/reducers/FilterReducer';
 import BasketReducer from './moviesList/reducers/BasketReducer';
 import CategoryReducer from './moviesList/reducers/CategoryReducer';
-import  AboutReducer from './moviesList/reducers/AboutReducer';
+import AboutReducer from './moviesList/reducers/AboutReducer';
 
 
 const store = createStore(combineReducers({

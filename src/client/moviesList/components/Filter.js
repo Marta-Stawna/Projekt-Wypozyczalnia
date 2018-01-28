@@ -1,15 +1,14 @@
-import React from 'react';
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 
 import { styles } from '../../css/materialUi';
 import { loadMoviesforFilter, filterMovies } from '../actions/MoviesActions';
-import { filter } from '../actions/MoviesActionCreator';
 
-class FilterMovies extends React.Component {
+class FilterMovies extends Component {
 
-  constructor(props){
-    super(props);
+  constructor() {
+    super();
     this.filterList = this.filterList.bind(this);
   }
 
@@ -54,4 +53,4 @@ class FilterMovies extends React.Component {
 export default connect(state => ({
   filter_list: state.FilterReducer.list,
   basket: state.BasketReducer.list
-}),{ filter, loadMoviesforFilter, filterMovies })(FilterMovies);
+}),{ loadMoviesforFilter, filterMovies })(FilterMovies);

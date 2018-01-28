@@ -24,25 +24,22 @@ window.ReactDOM = ReactDOM;
 
 try {
   injectTapEventPlugin();
-} catch (e) {
-}
+} catch (e) {}
 
 ReactDOM.render((
-<Provider store={store}>
+  <Provider store={store}>
     <MuiThemeProvider muiTheme={getMuiTheme()}>
-        <Router history={browserHistory}>
-            <Route path="/" component={App} >
-              <Route path="/movies" component={MoviesList}>
-                <Route path=":category" component={MoviesCategory}/>
-              </Route>
-              <Route path="/form" component={Form}/>
-              <Route path="/about" component={About}/>
-              <Route path="/filter" component={FilterMovies}/>
-
-            </Route>
-        </Router>
+      <Router history={browserHistory}>
+        <Route path="/" component={App} >
+          <Route path="/movies" component={MoviesList}>
+            <Route path=":category" component={MoviesCategory}/>
+          </Route>
+          <Route path="/form" component={Form}/>
+          <Route path="/about" component={About}/>
+          <Route path="/filter" component={FilterMovies}/>
+        </Route>
+      </Router>
     </MuiThemeProvider>
-</Provider>
-        ), document.getElementById('root'));
+  </Provider>), document.getElementById('root'));
 
 module.hot.accept();

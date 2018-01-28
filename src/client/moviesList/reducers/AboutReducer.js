@@ -1,7 +1,7 @@
-import {ACTIONS} from './MoviesListReducer';
+import { ACTIONS } from './MoviesListReducer';
 
-function AboutReducer(state={list:[]},action){
-  switch(action.type){
+function AboutReducer(state = { list: [] }, action) {
+  switch(action.type) {
     case ACTIONS.SET_ABOUT:
         return {...state, list:action.data};
     default:

@@ -7,7 +7,7 @@ export function setCategory(list) {
     list
   };
 }
-export function filter(name) {
+export function filterList(name) {
 
   return {
     type: ACTIONS.FILTER_LIST,

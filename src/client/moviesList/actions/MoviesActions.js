@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {setMovies, filter, setMoviesforFilter, setCategory, about} from './MoviesActionCreator';
+import {setMovies, filterList, setMoviesforFilter, setCategory, about} from './MoviesActionCreator';
 import { URLS } from '../../configuration';
 
 export function loadCategory() {
@@ -21,7 +21,7 @@ export function filterMovies(name) {
    return function (dispatch) {
      axios.get(URLS.MOVIES_LIST)
              .then((response) => dispatch(setMoviesforFilter(response.data.data)))
-             .then(()=> dispatch(filter(name)))
+             .then(()=> dispatch(filterList(name)))
   };
 }
 
